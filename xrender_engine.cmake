@@ -23,7 +23,6 @@ set(XRENDER_ENGINE_SHADER_DIR "${XRENDER_ENGINE_ROOT}/shaders")
 find_package(Vulkan REQUIRED)
 find_package(glfw3 REQUIRED)
 find_package(glm REQUIRED)
-find_package(Threads REQUIRED)
 
 list(APPEND XRENDER_ENGINE_SYSTEM_INCLUDE_DIRS ${Vulkan_INCLUDE_DIRS})
 
@@ -31,7 +30,6 @@ set(XRENDER_ENGINE_LIBRARIES
     Vulkan::Vulkan
     glfw
     glm::glm
-    Threads::Threads
 )
 
 function(xrender_compile_shaders target output_dir)
